@@ -1,4 +1,4 @@
-grpipeline {
+pipeline {
     agent any
 
     stages {
