@@ -12,7 +12,7 @@ grpipeline {
         stage('2-Test') {
             steps {
                 echo "Start of Stage Test"
-                echo "Testing........"
+                echo "Testing......."
                 echo "End of Stage Build"
             }
         }
