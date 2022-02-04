@@ -1,5 +1,4 @@
 #!groovy
-// Check ub1 properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
@@ -21,6 +20,7 @@ pipeline {
             steps {
                 sh 'sleep 5'
                 sh 'uptime'
+                sh 'whoami'
             }
         }
     }
