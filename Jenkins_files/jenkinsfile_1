@@ -1,4 +1,4 @@
-pipeline {
+grpipeline {
     agent any
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
         stage('2-Test') {
             steps {
                 echo "Start of Stage Test"
-                echo "Testing......."
+                echo "Testing........"
                 echo "End of Stage Build"
             }
         }
