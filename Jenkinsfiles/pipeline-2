@@ -15,6 +15,7 @@ pipeline {
             steps {
                 sh 'sleep 10'
                 sh 'ls -la'
+                sh 'date'
             }
         }
         stage("Second step") {
