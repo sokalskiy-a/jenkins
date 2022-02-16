@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo "==========Start building image=========="
                 dir('Dockerfiles') {
-                  sh 'docker build -t myapp:v1 .'
+                  sh 'docker build -t myapp:${env.BUILD_ID} .'
                 }
             }
         }
