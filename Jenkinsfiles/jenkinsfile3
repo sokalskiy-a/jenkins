@@ -28,7 +28,7 @@ pipeline {
         stage("Third step") {
             steps {
                 echo "==========Start building image=========="
-                dir('Dockerfiles/') {
+                dir('Dockerfiles') {
                   sh 'docker build .'
                 }
             }
