@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo "==========Start building image=========="
                 dir('Dockerfiles') {
-                  sh 'docker build .'
+                  sh 'docker build 123'
                 }
             }
         }
