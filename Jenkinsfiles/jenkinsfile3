@@ -1,0 +1,37 @@
+#!groovy
+properties([disableConcurrentBuilds()])
+
+pipeline {
+    agent {
+        label 'Node1'
+        }
+    triggers { pollSCM('* * * * *') }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("First step") {
+            steps {
+                sh 'sleep 10'
+                sh 'ls -la'
+                sh 'date'
+            }
+        }
+        stage("Second step") {
+            steps {
+                sh 'sleep 5'
+                sh 'uptime'
+                sh 'whoami'
+            }
+        }
+        stage("Third step") {
+            steps {
+                echo "==========Start building image=========="
+                dir('Dockerfiles/') {
+                  sh 'docker build .'
+                }
+            }
+        }
+    }
+}
