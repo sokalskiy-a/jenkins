@@ -30,7 +30,7 @@ pipeline {
                 echo "==========Start building image=========="
                 dir('Dockerfiles') {
                   sh 'docker build -t myapp:v2 .'
-                  sh 'docker run -d alpine'
+                  sh 'docker run -d alpine:v2'
                 }
             }
         }
