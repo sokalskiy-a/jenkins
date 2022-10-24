@@ -1,6 +1,6 @@
 #!groovy
 properties([disableConcurrentBuilds()])
-
+#sss
 pipeline {
     agent {
         label 'Node1'
